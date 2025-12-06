@@ -17,7 +17,7 @@ def load_bert():
 
 @st.cache_resource
 def load_model():
-    model_path = "../models/best_bert_model.pkl"
+    model_path = "models/best_bert_model.pkl"
 
     # First try with pickle
     try:
