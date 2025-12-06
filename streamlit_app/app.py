@@ -23,7 +23,7 @@ def load_model():
     try:
         with open(model_path, 'rb') as f:
             model = pickle.load(f)
-        st.success("Model loaded with pickle successfully!")
+        #st.success("Model loaded with pickle successfully!")
         return model
     except Exception as e:
         #st.warning(f"Pickle loading failed: {e}")
@@ -31,10 +31,10 @@ def load_model():
         # Try with joblib
         try:
             model = joblib.load(model_path)
-            st.success("Model loaded with joblib successfully!")
+            #st.success("Model loaded with joblib successfully!")
             return model
         except Exception as je:
-            st.error(f"Joblib loading also failed: {je}")
+            #st.error(f"Joblib loading also failed: {je}")
 
             # Last resort: Check what type of file it might be
             st.info("Checking file type...")
