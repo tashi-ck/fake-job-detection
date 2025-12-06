@@ -130,7 +130,7 @@ if st.button("Predict"):
         else:
             st.success("✅ The job posting appears **REAL**.")
 
-        st.write("Prediction Code:", label)
+        #st.write("Prediction Code:", label)
 
     except Exception as e:
         st.error(f"Error during prediction: {e}")
